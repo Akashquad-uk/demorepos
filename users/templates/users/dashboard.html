@@ -2,16 +2,40 @@
 {% extends 'base.html' %}
 
 {% block content %}
-Hello, {{ user.username|default:'Guest' }}!
+
+  <div class="auth-wrapper">
+        <div class="auth-content">
+            <div class="auth-bg">
+                <span class="r"></span>
+                <span class="r s"></span>
+                <span class="r s"></span>
+                <span class="r"></span>
+            </div>
+            <div class="card">
+                <div class="card-body text-center">
+                    <div class="mb-4">
+                        <i class="feather icon-unlock auth-icon"></i>
+                    </div>
+                    <h3 class="mb-4">You Are Now Logged In</h3>
+
+                    <span class="mb-0 text-muted">
+               
+
+                  <h2> Hello, {{ user.username|default:'Guest' }}!</h2>
 
 <div>
-    {% csrf_token %}
     {% if user.is_authenticated %}
-        <a href="{% url 'logout' %}">Logout</a>
+        <a href="{% url 'logout' %}">Logout</a><br />
         <a href="{% url 'password_change' %}">Change password</a>
     {% else %}
         <a href="{% url 'login' %}">Login</a>
     {% endif %}
+</div>        
+
+        </span>
+    </div>
+</div>
+</div>
 </div>
 
 {% endblock %}
