@@ -154,6 +154,7 @@ STATIC_URL = '/static/'
 
 # def setVar():
 os.environ['EMAIL_USER'] = 'akashbrickwin@gmail.com'
+
 os.environ['EMAIL_PASS'] = 'quadwave@1234'
 
 

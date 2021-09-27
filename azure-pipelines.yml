@@ -28,6 +28,7 @@ variables:
 stages:
 - stage: Build
   displayName: Build stage
+  on: [push]
   jobs:
   - job: BuildJob
     pool:
